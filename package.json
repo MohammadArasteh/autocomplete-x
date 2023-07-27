@@ -1,0 +1,33 @@
+{
+  "name": "@novin/cover-ag-grid-web",
+  "version": "0.1.2",
+  "main": "dist/index.js",
+  "description": "wrapper implementation over ag-grid library based on novin-rayvarz's RDT system",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "release:local": "npm run build && yalc push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.nrayvarz.ir/and-official/rayvarz/packages/cover-ag-grid-web",
+    "directory": "cover-ag-grid-web"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/node": "^18.11.7",
+    "axios": "^1.4.0",
+    "esbuild": "^0.14.53",
+    "typescript": "^5.0.2",
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.6.6",
+    "vite-tsconfig-paths": "3.5.2"
+  }
+}
