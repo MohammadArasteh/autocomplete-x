@@ -1,8 +1,8 @@
 {
-  "name": "@novin/cover-ag-grid-web",
-  "version": "0.1.2",
+  "name": "autocomplete-x",
+  "version": "1.1.0",
   "main": "dist/index.js",
-  "description": "wrapper implementation over ag-grid library based on novin-rayvarz's RDT system",
+  "description": "autocomplete component written in typescript",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.nrayvarz.ir/and-official/rayvarz/packages/cover-ag-grid-web",
+    "url": "https://github.com/MohammadArasteh/autocomplete-x",
     "directory": "cover-ag-grid-web"
   },
   "publishConfig": {
@@ -23,7 +23,6 @@
   "devDependencies": {
     "@faker-js/faker": "^8.0.2",
     "@types/node": "^18.11.7",
-    "axios": "^1.4.0",
     "esbuild": "^0.14.53",
     "typescript": "^5.0.2",
     "vite": "^3.1.0",

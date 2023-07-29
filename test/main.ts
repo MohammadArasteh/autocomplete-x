@@ -1,5 +1,5 @@
-import autocompleteX from "../src/autocomplete-x";
-import { TAutoCompleteItem } from "../src/type";
+import { autocompleteX } from "../src";
+import { TAutoCompleteItem } from "../src";
 import "./styles.css";
 import { faker } from "@faker-js/faker";
 
