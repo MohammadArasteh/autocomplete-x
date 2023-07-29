@@ -36,6 +36,7 @@ function autocompleteX<TData>(params: IAutoCompleteParameters<TData>) {
   const inputElement = document.createElement("input");
   inputElement.className = "ray-grid-autocomplete-input";
   if (params.placeholder) inputElement.placeholder = params.placeholder;
+  if (currentValue) inputElement.value = currentValue.label;
 
   const listContainerElement = document.createElement("div");
   listContainerElement.className = "ray-grid-autocomplete-list";

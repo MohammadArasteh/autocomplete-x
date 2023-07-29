@@ -7,7 +7,7 @@
   overflow: auto;
   display: flex;
   flex-direction: column;
-  background-color: pink;
+  background-color: #f5f6fa;
   position: absolute;
   top: 100%;
   right: 0;
@@ -17,9 +17,8 @@
   padding: 4px;
 }
 .ray-grid-autocomplete-highlighted-item {
-  background-color: purple;
+  background-color: #dcdde1;
 }
 .ray-grid-autocomplete-selected-item {
-  background-color: blue;
   pointer-events: none;
 }

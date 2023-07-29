@@ -42,6 +42,10 @@ async function DOMContentLoadedHandler() {
     },
     lazyFetch: true,
     nullable: true,
+    currentValue: {
+      label: "HELLO",
+      value: {},
+    },
   });
   const body = document.getElementById("app");
   body?.append(autocompleteInput);
