@@ -36,7 +36,6 @@ async function DOMContentLoadedHandler() {
         classNames: ["golden-item"],
       },
     ],
-    closeAfterSelect: true,
     className: "custom-class-name",
     onSelect(item) {
       console.log({ item });

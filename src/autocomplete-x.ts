@@ -270,44 +270,52 @@ function autocompleteX<TData>(params: IAutoCompleteParameters<TData>) {
   }
 
   const onClickDocument = (event: MouseEvent) => {
-    const inputStartX = inputContainer.offsetLeft;
-    const inputStartY = inputContainer.offsetTop;
-    const inputHeight = inputContainer.clientHeight;
-    const inputWidth = inputContainer.clientWidth;
+    const target = event.target as HTMLElement;
 
-    const listStartX = inputStartX + listContainerElement.offsetLeft;
-    const listStartY = inputStartY + listContainerElement.offsetTop;
-    const listEndX = listStartX + listContainerElement.offsetWidth;
-    const listEndY = listStartY + listContainerElement.offsetHeight;
+    // const inputStartX = inputContainer.offsetLeft;
+    // const inputStartY = inputContainer.offsetTop;
+    // const inputHeight = inputContainer.clientHeight;
+    // const inputWidth = inputContainer.clientWidth;
 
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
+    // const listStartX = inputStartX + listContainerElement.offsetLeft;
+    // const listStartY = inputStartY + listContainerElement.offsetTop;
+    // const listEndX = listStartX + listContainerElement.offsetWidth;
+    // const listEndY = listStartY + listContainerElement.offsetHeight;
 
-    const clickedInsideInput = isPointerInArea(
-      { mouseX, mouseY },
-      {
-        startX: inputStartX,
-        endX: inputStartX + inputWidth,
-        startY: inputStartY,
-        endY: inputStartY + inputHeight,
-      }
+    // const mouseX = event.clientX;
+    // const mouseY = event.clientY;
+
+    // const clickedInsideInput = isPointerInArea(
+    //   { mouseX, mouseY },
+    //   {
+    //     startX: inputStartX,
+    //     endX: inputStartX + inputWidth,
+    //     startY: inputStartY,
+    //     endY: inputStartY + inputHeight,
+    //   }
+    // );
+    // const clickedInsideList = isPointerInArea(
+    //   {
+    //     mouseX,
+    //     mouseY,
+    //   },
+    //   {
+    //     startX: listStartX,
+    //     endX: listEndX,
+    //     startY: listStartY,
+    //     endY: listEndY,
+    //   }
+    // );
+
+    const clickedInsideInput = target.classList.contains(
+      "ray-grid-autocomplete-input"
     );
-    const clickedInsideList = isPointerInArea(
-      {
-        mouseX,
-        mouseY,
-      },
-      {
-        startX: listStartX,
-        endX: listEndX,
-        startY: listStartY,
-        endY: listEndY,
-      }
+    const clickedInsideList = target.classList.contains(
+      "ray-grid-autocomplete-list-item"
     );
 
     if (!clickedInsideInput && !clickedInsideList) closeDropdown();
   };
-  document.addEventListener("click", onClickDocument);
 
   function onDestroy() {}
 
