@@ -75,6 +75,7 @@ function autocompleteX<TData>(params: IAutoCompleteParameters<TData>) {
         break;
       }
       case "Enter": {
+        event.stopPropagation();
         if (currentFocusedItem) {
           updateSelectedItem(currentFocusedItem, currentFocusedItemIndex, true);
           if (params.onSelect) params.onSelect(currentFocusedItem.value);
